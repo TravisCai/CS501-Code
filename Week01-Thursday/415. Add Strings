@@ -25,6 +25,8 @@ public class Solution {
         while(index1 >= 0 || index2 >= 0){
             int x = index1 < 0 ? 0:num1.charAt(index1) - '0';
             int y = index2 < 0 ? 0:num2.charAt(index2) - '0';
+            
+            sb.append((x + y + carry) % 10);
             carry = (x + y + carry) / 10;
             
             index1--;
